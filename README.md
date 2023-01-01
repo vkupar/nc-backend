@@ -25,7 +25,7 @@ Install dependencies:
 npm install
 ```
 
-Set default environment variables. Create a `Firebase` project and specify credentials:
+Set default environment variables. Create a `Firebase` project, activate Authentication => Phone, and specify credentials:
 
 ```
 cp .env.example .env
