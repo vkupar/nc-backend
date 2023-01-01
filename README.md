@@ -1,9 +1,9 @@
-### General information
+### General information - [https://nc-backend.herokuapp.com/](https://nc-backend.herokuapp.com/)
 
 - Working on this project (BE + FE + Deployment) took me around 2 full days.
 - Used `npm init` to initialize the package.json
 - Used `tsc --init` to initialize the tsconfig.json
-- Deployed on `Heroku` (had experience of deploying on Heroku before) - [https://nc-backend.herokuapp.com/](https://nc-backend.herokuapp.com/)
+- Deployed on `Heroku`, had experience of deploying on Heroku before. While specifying firebase private key on Heroku env vars, make sure that you replace `\n` with actual new lines. Pushing changes on the `main` branch triggers automatic deployment on Heroku.
 - Database - `MongoDB (Atlas)`. I worked with Firestore about 4 years ago, for a few months, but due to having a limited time, I decided to go with MongoDB, where I have more experience. Remark: since MongoDB doesn't have a "primary key" concept, I've made "phone number" to be unique.
 - ! Swagger documentation is missing _(will be added if requested)_
 - ! Tests are missing _(will be added if requested)_
