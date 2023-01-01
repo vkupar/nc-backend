@@ -3,11 +3,11 @@ import userRepository from '../repositories/users.repository'
 import getDecodedUser from '../utils/getDecodedUser'
 import { HttpException } from '../utils/HttpException'
 
-const authMiddleware = async (
+async function authMiddleware(
   req: Request,
   _res: Response,
   next: NextFunction,
-) => {
+) {
   try {
     const token = req.header('Authorization')
     if (!token) {

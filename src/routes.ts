@@ -5,7 +5,7 @@ import usersValidation from './validations/users.validation'
 
 const router = Router()
 
-router.get('/profile', usersController.getUser)
+router.get('/profile', usersController.findOne)
 router.put(
   '/profile',
   validate(usersValidation.createOrUpdate),

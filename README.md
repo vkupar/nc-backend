@@ -70,7 +70,6 @@ npm run build
 |   ├── types
 |   ├── utils                         # Utilities/helpers
 |   ├── validations                   # Request payload validation schemas
-|   ├── app.ts                        # Initialize loaders, middlewares, routes
 |   ├── config.ts                     # Environment variables and secrets
 |   ├── index.ts                      # Application entry point
 |   └── routes.ts                     # Express routes that define API structure

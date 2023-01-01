@@ -9,11 +9,11 @@ export default async () => {
   await mongoose.connect(config.databaseUri)
   logger.info('Connected to the database')
 
-  mongoose.connection.on('error', (err) => {
-    logger.error(err)
+  mongoose.connection.on('error', (error) => {
+    logger.error(error)
   })
 
   mongoose.connection.on('disconnected', () => {
-    logger.info('The database disconnected')
+    logger.info('Database disconnected')
   })
 }

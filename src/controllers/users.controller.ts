@@ -2,7 +2,7 @@ import { NextFunction, Request, Response } from 'express'
 import usersService from '../services/users.service'
 import { HttpException } from '../utils/HttpException'
 
-const getUser = (req: Request, res: Response) => {
+function findOne(req: Request, res: Response) {
   return res.status(200).json({
     status: 200,
     success: true,
@@ -13,11 +13,7 @@ const getUser = (req: Request, res: Response) => {
   })
 }
 
-const createOrUpdate = async (
-  req: Request,
-  res: Response,
-  next: NextFunction,
-) => {
+async function createOrUpdate(req: Request, res: Response, next: NextFunction) {
   try {
     const payload = req.body
     const user = await usersService.createOrUpdate(
@@ -39,4 +35,4 @@ const createOrUpdate = async (
   }
 }
 
-export default { getUser, createOrUpdate }
+export default { findOne, createOrUpdate }

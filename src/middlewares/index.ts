@@ -3,19 +3,8 @@ import compression from 'compression'
 import helmet from 'helmet'
 import hpp from 'hpp'
 import cors from 'cors'
-import logger from '../utils/logger'
 
-export default async ({ app }: { app: express.Application }) => {
-  logger.info('Initializing middlewares')
-
-  // Health check endpoints
-  app.get('/v1/status', (_req, res) => {
-    res.status(200).end()
-  })
-  app.head('/v1/status', (_req, res) => {
-    res.status(200).end()
-  })
-
+export default ({ app }: { app: express.Application }) => {
   // Enable Cross-Origin Resource Sharing
   app.options('*', cors())
   app.use(cors())
@@ -34,6 +23,4 @@ export default async ({ app }: { app: express.Application }) => {
 
   // Parse url-encoded request body
   app.use(express.urlencoded({ extended: true }))
-
-  logger.info('Initialized middlewares')
 }

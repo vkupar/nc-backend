@@ -1,6 +1,6 @@
 import usersModel from '../models/users.model'
 
-const findByPhoneNumber = async (phoneNumber: string) => {
+async function findByPhoneNumber(phoneNumber: string) {
   return await usersModel
     .findOne({
       phoneNumber: phoneNumber,
@@ -8,10 +8,10 @@ const findByPhoneNumber = async (phoneNumber: string) => {
     .exec()
 }
 
-const create = async (
+async function create(
   phoneNumber: string,
   payload: { name: string; email: string },
-) => {
+) {
   return await usersModel.create({
     phoneNumber: phoneNumber,
     name: payload.name,
@@ -19,10 +19,10 @@ const create = async (
   })
 }
 
-const update = async (
+async function update(
   userId: string,
   payload: { name: string; email: string },
-) => {
+) {
   return await usersModel
     .findOneAndUpdate(
       {
